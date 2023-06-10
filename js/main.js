@@ -1,21 +1,9 @@
-function qetRandomIntInclusive (min, max) 
-{
-    if (min >=0 && max>= 0 && min < max)
-    {
-    min = Math.ceil(min);
-    max = Math.floor (max);
-
-    return Math.floor (Match.random () * (max - min + 1)) + min;
+function qetRandomPositiveInteger (a, b) {
+const lower = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
+const upper = Math.floor(Math.max(Math.abs(a), Math.abs(b)));
+const result = Math.random() * (upper - lower + 1) + lower;
+return Math.floor(result);
 }
-else {
-    if (min > max) {
-        return 'Incorrect order of values!';
-    }
-    }
-}
-
-const result = getRandomIntInclusive (0, -2);
-
 function checkStringLength (string, length) {
     return string.length <= length;
   }
