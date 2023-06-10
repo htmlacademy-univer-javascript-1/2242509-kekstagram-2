@@ -1,4 +1,4 @@
-function checkLength (str. maxLength) {
+function checkLength (str maxLength) {
     if (str.length <= maxLength) {
         return true;
     }
