@@ -1,8 +1,8 @@
-function qetRandomIntInclusive(min, max)
+function qetRandomIntInclusive (min, max) 
 {
     if (min >=0 && max>= 0 && min < max)
     {
-    min = Meth.ceil(min);
+    min = Math.ceil(min);
     max = Math.floor (max);
 
     return Math.floor (Match.random () * (max - min + 1)) + min;
