@@ -15,4 +15,7 @@ else {
 }
 
 const result = getRandomIntInclusive (0, -2);
-console.log(result);
+
+function checkStringLength (string, length) {
+    return string.length <= length;
+  }
