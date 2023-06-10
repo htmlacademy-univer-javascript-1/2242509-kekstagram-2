@@ -1,5 +1,5 @@
-function checkLength (str, maxLength) {
-    if (str.length <= maxLength) {
+function checkLength(str,maxLength) {
+    if (strlength <= maxLength) {
         return true;
     }
     return false;
@@ -10,7 +10,7 @@ function getrandomNumber(min, max) {
         return "Ошибка!";
     }
     if (max <= min) {
-        return "Проверть введённые данные!";
+        return "Проверьте введённые данные!";
     }
     min = Math.ceil(min);
     max = Math.floor(max);
