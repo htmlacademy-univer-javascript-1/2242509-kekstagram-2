@@ -1,18 +1,18 @@
-function checkLength(str, maxLength) {
-  if (str, length <= maxLength) {
-    return true;
+function getRandomIntInclusive(min, max)
+{
+  if (min >= 0 && max >= 0 && min < max)
+  {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  return false;
+  else
+  {
+    if (min > max) {return 'Incorrect order of values!';}
+    else {return 'Negative number!';}
+  }
 }
 
-function getrandomNumber(min, max) {
-  if (min < 0) {
-    return 'Ошибка!';
-  }
-  if (max <= min) {
-    return 'Проверьте введённые данные!';
-  }
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1) +min);
-}
+const result = getRandomIntInclusive(0, -2);
+console.log(result);
