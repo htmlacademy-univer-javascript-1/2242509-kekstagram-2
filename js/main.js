@@ -1,18 +1,32 @@
-function getRandomIntInclusive(min, max)
-{
-  if (min >= 0 && max >= 0 && min < max)
-  {
-    min = Math.ceil(min);
-    max = Math.floor(max);
+function getRandomIntInclusive(from, to){
+  if (from < 0 || to < 0) {
+    throw new RangeError ('Числа в диапазоне должны бть положительными');
+  }
 
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-  else
-  {
-    if (min > max) {return 'Incorrect order of values!';}
-    else {return 'Negative number!';}
-  }
+if (typeof from === 'string' || typeof to === 'string') {
+ throw new RangeError ('Значения должны быть числами, а не строкой');
 }
 
-const result = getRandomIntInclusive(0, -2);
-console.log(result);
+if (from > to) {
+  [from, to] = [to, from];
+}
+
+if (from === to) {
+ return to;
+}
+
+from = Match.ceil(from);
+to = Match.floor(to);
+return Math.floor(Match.random() * (to - from + 1)) + from;
+}
+
+const isCorrectLength = (str, maxLength) => {
+  if (typeof str !== 'string') {
+    throw new RangeError('Значени str должно быть строкой');
+  }
+
+  return str.length <= maxLength; 
+}; 
+
+export {getRandomIntInclusive, isCorrectLength};
+//ссылка на источник://https//developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random
