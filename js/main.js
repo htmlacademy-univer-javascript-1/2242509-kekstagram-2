@@ -15,8 +15,8 @@ if (from === to) {
  return to;
 }
 
-from = Match.ceil(from);
-to = Match.floor(to);
+from = Math.ceil(from);
+to = Math.floor(to);
 return Math.floor(Match.random() * (to - from + 1)) + from;
 }
 
@@ -29,4 +29,3 @@ const isCorrectLength = (str, maxLength) => {
 }; 
 
 export {getRandomIntInclusive, isCorrectLength};
-//ссылка на источник://https//developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random
